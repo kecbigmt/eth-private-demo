@@ -1,0 +1,30 @@
+eth.getBlock(0)
+eth.accounts
+eth.coinbase
+eth.setEtherbase(eth.accounts[1])
+miner.setEtherbase(eth.accounts[1])
+> miner.setEtherbase(eth.accounts[1])
+true
+miner.start()
+eth.minig()
+eth.minig
+eth.mining
+eth.blockNumber
+eth.hashrate
+eth.blockNumber
+eth.hashrate
+eth.mining
+eth.hashrate
+eth.blockNumber
+minig.stop()
+mining.stop()
+miner.stop()
+eth.getBlock(100)
+eth.getBlock(99)
+eth.getBlance(eth.accounts[0])
+eth.getBalance(eth.accounts[0])
+eth.getBalance(eth.accounts[1])
+web3.fromWei(eth.getBalance(eth.accounts[0]),"ether")
+web3.fromWei(eth.getBalance(eth.accounts[1]),"ether")
+web3.fromWei(eth.getBalance(eth.accounts[0]),"ether") // 1番目のアカウントfooの残高をether単位で確認
+web3.fromWei(eth.getBalance(eth.accounts[1]),"ether") // 2番目のアカウントbarの残高をether単位で確認
