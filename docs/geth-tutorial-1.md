@@ -286,7 +286,7 @@ true
   mixHash: "0x59929902c691655868aa59cf53bfd2be9c40e8bf569ba767f94c675f7c5ea20d",
   nonce: "0x01ae8f238386d18c",
   number: 100,
-  parentHash: "0x6744542fb19458390d875119a9a271751c4aeedabb5a4d320587148faf4acc53",
+  parentHash: "0x6744542fb19458390d875119a9a271751c4aeedabb5a4d320587148faf4acc53", // このブロックの親（99）のhash
   receiptsRoot: "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
   sha3Uncles: "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
   size: 538,
@@ -299,13 +299,13 @@ true
 }
 ```
 
-細かいフィールドの説明は省きますが、`minor`にはこのブロックを採掘したアカウント`bar`のアドレスが入っていて、`parentHash`にはこのブロックの前のブロック、つまり99番目のブロックのhash値が入っています。
+細かいフィールドの説明は省きますが、`miner`にはこのブロックを採掘したアカウント`bar`のアドレスが入っていて、`parentHash`にはこのブロックの前のブロック、つまり99番目のブロックのhash値が入っています。
 99番目のブロックの`hash`を確認すれば、100番目の`parentHash`と一致していることがわかります。
 
 ```js:Terminal+Geth
 > eth.getBlock(99) // 99番目のブロックを一部抜粋
 {
-  hash: "0x6744542fb19458390d875119a9a271751c4aeedabb5a4d320587148faf4acc53",
+  hash: "0x6744542fb19458390d875119a9a271751c4aeedabb5a4d320587148faf4acc53", // このブロックの子（100）のparentHashと一致
   nonce: "0x73169a1acb975eb4",
   number: 99,
   parentHash: "0x8898af4a904dea9591f5de39d412d772dd3b08ea11a17b851cd5e15516b7e685",
@@ -348,6 +348,9 @@ Gethという優秀なクライアントソフトが用意されているので�
 プログラミングやブロックチェーンの初心者には、とりあえずGethを使ってしばらく遊んでみることをおすすめします。プライベートネットワーク上で遊んでいる限りは何をしても実害を被ることはないはずです。
 
 私もブロックチェーン学習中の身なので、これからいろいろ読んでみていじってみて、どんどん投稿していきます。
+
+次回の記事はこちら
+[Ethereumのプライベートネットワークで送金してみる（Geth on macOS）](https://qiita.com/kecy/items/a4a44843a4341bf8f189)
 
 # References
 - Ethereum入門: https://book.ethereum-jp.net/
